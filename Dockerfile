@@ -12,8 +12,9 @@ RUN curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh \
 RUN npm install -g yarn
 
 COPY . /usr/src
-WORKDIR /usr/src/{--app名を入力--}
+WORKDIR /usr/src/アプリ名
 RUN bundle install
+COPY . .
 
 RUN rm -f tmp/pids/server.pid
 
