@@ -11,12 +11,9 @@ RUN curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh \
 
 RUN npm install -g yarn
 
-WORKDIR ${ROOT}
-COPY Gemfile ${ROOT}
-COPY Gemfile.lock ${ROOT}
-
+COPY . /usr/src
+WORKDIR /usr/src/{--app名を入力--}
 RUN bundle install
-COPY . ${ROOT}
 
 RUN rm -f tmp/pids/server.pid
 
