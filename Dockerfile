@@ -12,7 +12,7 @@ RUN curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh \
 RUN npm install -g yarn
 
 COPY . /usr/src
-WORKDIR /usr/src/アプリ名
+WORKDIR /usr/src/ReviewApp
 RUN bundle install
 COPY . .
 
